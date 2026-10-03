@@ -286,9 +286,9 @@
     </div>
   </div>
 
-  <!-- Romantic Soft Lofi Piano Background Audio -->
+  <!-- Romantic Soft Lofi Piano Background Audio (100% Reliable Direct CDN) -->
   <audio id="bgSong" loop preload="auto">
-    <source src="https://archive.org/download/jamendo-620715/49%20-%20romantic%20lofi.mp3" type="audio/mpeg">
+    <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112191.mp3" type="audio/mpeg">
   </audio>
 
   <!-- Floating Music Toggle Pill -->
@@ -311,7 +311,7 @@
       <p class="caption">My favourite 🥹❤️</p>
     </div>
 
-    <!-- Photo 2 (UPDATED CAPTION) -->
+    <!-- Photo 2 -->
     <div class="polaroid-card">
       <img src="IMG-20261001-WA0023.jpg" alt="Memory 2">
       <p class="caption">Too precious to describe 💫</p>
@@ -403,7 +403,9 @@
       song.play().then(() => {
         musicIcon.innerText = "🔊";
         musicText.innerText = "Music On";
-      }).catch(err => console.log(err));
+      }).catch(err => {
+        console.log("Audio play error:", err);
+      });
 
       triggerMagic();
     }
